@@ -1,0 +1,25 @@
+{
+  "name": "storybook-framework-twig",
+  "version": "1.0.0",
+  "main": "dist/client/index.js",
+  "typings": "dist/client/index.d.ts",
+  "license": "MIT",
+  "bin": {
+    "storybook": "./bin/index.js",
+    "build-storybook": "./bin/build.js",
+    "storybook-server": "./bin/index.js"
+  },
+  "dependencies": {
+    "@storybook/addons": "^6.5.16",
+    "@storybook/client-api": "^6.5.16",
+    "@storybook/core": "^6.5.16",
+    "@storybook/core-common": "^6.5.16",
+    "@types/webpack-env": "^1.18.0",
+    "global": "^4.4.0",
+    "read-pkg-up": "7.0.1"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.2",
+    "typescript": "^4.9.5"
+  }
+}

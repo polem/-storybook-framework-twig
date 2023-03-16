@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "types": ["webpack-env", "node"],
+    "rootDir": "src",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "incremental": false,
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "target": "es5",
+    "lib": ["es2017", "dom"]
+  },
+  "include": [
+    "src/**/*"
+  ],
+}
