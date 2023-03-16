@@ -1,5 +1,5 @@
 Arguments: 
-  /opt/homebrew/Cellar/node/19.6.1/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js add -D @types/global
+  /opt/homebrew/Cellar/node/19.6.1/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js init
 
 PATH: 
   /opt/homebrew/opt/openjdk/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/paul-emile.miny/.nvm/versions/node/v18.14.0/bin:/opt/homebrew/opt/openjdk/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/paul-emile.miny/Library/Application Support/JetBrains/Toolbox/scripts:/Users/paul-emile.miny/.local/bin:/Users/paul-emile.miny/go/bin:/Users/paul-emile.miny/Library/Application Support/JetBrains/Toolbox/scripts:/Users/paul-emile.miny/.local/bin:/Users/paul-emile.miny/go/bin:/Users/paul-emile.miny/.local/bin
@@ -14,17 +14,17 @@ Platform:
   darwin arm64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fglobal: Not found
-      at params.callback [as _callback] (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:66145:18)
-      at self.callback (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:140890:22)
-      at Request.emit (node:events:512:28)
-      at Request.<anonymous> (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:141862:10)
-      at Request.emit (node:events:512:28)
-      at IncomingMessage.<anonymous> (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:141784:12)
-      at Object.onceWrapper (node:events:626:28)
-      at IncomingMessage.emit (node:events:524:35)
-      at endReadableNT (node:internal/streams/readable:1359:12)
-      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+  Error: canceled
+      at Interface.<anonymous> (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:137150:13)
+      at Interface.emit (node:events:512:28)
+      at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1132:18)
+      at ReadStream.onkeypress (node:internal/readline/interface:271:20)
+      at ReadStream.emit (node:events:512:28)
+      at emitKeys (node:internal/readline/utils:357:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+      at ReadStream.emit (node:events:512:28)
+      at addChunk (node:internal/streams/readable:324:12)
 
 npm manifest: 
   {
@@ -45,16 +45,10 @@ npm manifest:
       "@storybook/core-common": "^6.5.16",
       "@types/webpack-env": "^1.18.0",
       "global": "^4.4.0",
-      "read-pkg-up": "^9.1.0"
+      "read-pkg-up": "7.0.1"
     },
-    "files": [
-      "bin/**/*",
-      "dist/**/*",
-      "README.md",
-      "*.js",
-      "*.d.ts"
-    ],
     "devDependencies": {
+      "@tsconfig/recommended": "^1.0.2",
       "typescript": "^4.9.5"
     }
   }
@@ -1825,6 +1819,11 @@ Lockfile:
       regenerator-runtime "^0.13.7"
       resolve-from "^5.0.0"
   
+  "@tsconfig/recommended@^1.0.2":
+    version "1.0.2"
+    resolved "https://registry.yarnpkg.com/@tsconfig/recommended/-/recommended-1.0.2.tgz#1e198237225933e319718f082e78366e9f159d71"
+    integrity sha512-dbHBtbWBOjq0/otpopAE02NT2Cm05Qe2JsEKeCf/wjSYbI2hz8nCqnpnOJWHATgjDz4fd3dchs3Wy1gQGjfN6w==
+  
   "@types/glob@*":
     version "8.1.0"
     resolved "https://registry.npmjs.org/@types/glob/-/glob-8.1.0.tgz"
@@ -1898,7 +1897,7 @@ Lockfile:
     resolved "https://registry.npmjs.org/@types/node/-/node-16.18.16.tgz"
     integrity sha512-ZOzvDRWp8dCVBmgnkIqYCArgdFOO9YzocZp8Ra25N/RStKiWvMOXHMz+GjSeVNe5TstaTmTWPucGJkDw0XXJWA==
   
-  "@types/normalize-package-data@^2.4.0", "@types/normalize-package-data@^2.4.1":
+  "@types/normalize-package-data@^2.4.0":
     version "2.4.1"
     resolved "https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz"
     integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
@@ -4111,14 +4110,6 @@ Lockfile:
       locate-path "^6.0.0"
       path-exists "^4.0.0"
   
-  find-up@^6.3.0:
-    version "6.3.0"
-    resolved "https://registry.npmjs.org/find-up/-/find-up-6.3.0.tgz"
-    integrity sha512-v2ZsoEuVHYy8ZIlYqwPe/39Cy+cFDzp4dXPaxNvkEuouymu+2Jbz0PxpKarJHYJTmv2HWT3O382qY8l4jMWthw==
-    dependencies:
-      locate-path "^7.1.0"
-      path-exists "^5.0.0"
-  
   flush-write-stream@^1.0.0:
     version "1.1.1"
     resolved "https://registry.npmjs.org/flush-write-stream/-/flush-write-stream-1.1.1.tgz"
@@ -4643,13 +4634,6 @@ Lockfile:
     resolved "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.9.tgz"
     integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
   
-  hosted-git-info@^4.0.1:
-    version "4.1.0"
-    resolved "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-4.1.0.tgz"
-    integrity sha512-kyCuEOWjJqZuDbRHzL8V93NzQhwIB71oFWSyzVo+KPZI+pnQPPxucdkrOZvkLRnrf5URsQM+IJ09Dw29cRALIA==
-    dependencies:
-      lru-cache "^6.0.0"
-  
   html-entities@^2.1.0:
     version "2.3.3"
     resolved "https://registry.npmjs.org/html-entities/-/html-entities-2.3.3.tgz"
@@ -4928,7 +4912,7 @@ Lockfile:
     resolved "https://registry.npmjs.org/is-callable/-/is-callable-1.2.7.tgz"
     integrity sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==
   
-  is-core-module@^2.5.0, is-core-module@^2.9.0:
+  is-core-module@^2.9.0:
     version "2.11.0"
     resolved "https://registry.npmjs.org/is-core-module/-/is-core-module-2.11.0.tgz"
     integrity sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==
@@ -5393,13 +5377,6 @@ Lockfile:
     integrity sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==
     dependencies:
       p-locate "^5.0.0"
-  
-  locate-path@^7.1.0:
-    version "7.2.0"
-    resolved "https://registry.npmjs.org/locate-path/-/locate-path-7.2.0.tgz"
-    integrity sha512-gvVijfZvn7R+2qyPX8mAuKcFGDf6Nc61GdvGafQsHL0sBIxfKzA+usWn4GFC/bk+QdwPUD4kWFJLhElipq+0VA==
-    dependencies:
-      p-locate "^6.0.0"
   
   lodash.debounce@^4.0.8:
     version "4.0.8"
@@ -5906,16 +5883,6 @@ Lockfile:
       semver "2 || 3 || 4 || 5"
       validate-npm-package-license "^3.0.1"
   
-  normalize-package-data@^3.0.2:
-    version "3.0.3"
-    resolved "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-3.0.3.tgz"
-    integrity sha512-p2W1sgqij3zMMyRC067Dg16bfzVH+w7hyegmpIvZ4JNjqtGOVAIvLmjBx3yP7YTe9vKJgkoNOPjwQGogDoMXFA==
-    dependencies:
-      hosted-git-info "^4.0.1"
-      is-core-module "^2.5.0"
-      semver "^7.3.4"
-      validate-npm-package-license "^3.0.1"
-  
   normalize-path@^2.1.1:
     version "2.1.1"
     resolved "https://registry.npmjs.org/normalize-path/-/normalize-path-2.1.1.tgz"
@@ -6140,13 +6107,6 @@ Lockfile:
     dependencies:
       yocto-queue "^0.1.0"
   
-  p-limit@^4.0.0:
-    version "4.0.0"
-    resolved "https://registry.npmjs.org/p-limit/-/p-limit-4.0.0.tgz"
-    integrity sha512-5b0R4txpzjPWVw/cXXUResoD4hb6U/x9BH08L7nw+GN1sezDzPdxeRvpc9c433fZhBan/wusjbCsqwqm4EIBIQ==
-    dependencies:
-      yocto-queue "^1.0.0"
-  
   p-locate@^3.0.0:
     version "3.0.0"
     resolved "https://registry.npmjs.org/p-locate/-/p-locate-3.0.0.tgz"
@@ -6167,13 +6127,6 @@ Lockfile:
     integrity sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==
     dependencies:
       p-limit "^3.0.2"
-  
-  p-locate@^6.0.0:
-    version "6.0.0"
-    resolved "https://registry.npmjs.org/p-locate/-/p-locate-6.0.0.tgz"
-    integrity sha512-wPrq66Llhl7/4AGC6I+cqxT07LhXvWL08LNXz1fENOw0Ap4sRZZ/gZpTTJ5jpurzzzfS2W/Ge9BY3LgLjCShcw==
-    dependencies:
-      p-limit "^4.0.0"
   
   p-map@^2.0.0:
     version "2.1.0"
@@ -6265,7 +6218,7 @@ Lockfile:
     dependencies:
       error-ex "^1.2.0"
   
-  parse-json@^5.0.0, parse-json@^5.2.0:
+  parse-json@^5.0.0:
     version "5.2.0"
     resolved "https://registry.npmjs.org/parse-json/-/parse-json-5.2.0.tgz"
     integrity sha512-ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg==
@@ -6324,11 +6277,6 @@ Lockfile:
     version "4.0.0"
     resolved "https://registry.npmjs.org/path-exists/-/path-exists-4.0.0.tgz"
     integrity sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==
-  
-  path-exists@^5.0.0:
-    version "5.0.0"
-    resolved "https://registry.npmjs.org/path-exists/-/path-exists-5.0.0.tgz"
-    integrity sha512-RjhtfwJOxzcFmNOi6ltcbcu4Iu+FL3zEj83dk4kAS+fVpTxXLO1b38RvJgT/0QwvV/L3aY9TAnyv0EOqW4GoMQ==
   
   path-is-absolute@^1.0.0:
     version "1.0.1"
@@ -6740,15 +6688,7 @@ Lockfile:
       loader-utils "^2.0.0"
       schema-utils "^3.0.0"
   
-  read-pkg-up@^1.0.1:
-    version "1.0.1"
-    resolved "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-1.0.1.tgz"
-    integrity sha512-WD9MTlNtI55IwYUS27iHh9tK3YoIVhxis8yKhLpTqWtml739uXc9NWTpxoHkfZf3+DkCCsXox94/VWZniuZm6A==
-    dependencies:
-      find-up "^1.0.0"
-      read-pkg "^1.0.0"
-  
-  read-pkg-up@^7.0.1:
+  read-pkg-up@7.0.1, read-pkg-up@^7.0.1:
     version "7.0.1"
     resolved "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-7.0.1.tgz"
     integrity sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==
@@ -6757,14 +6697,13 @@ Lockfile:
       read-pkg "^5.2.0"
       type-fest "^0.8.1"
   
-  read-pkg-up@^9.1.0:
-    version "9.1.0"
-    resolved "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-9.1.0.tgz"
-    integrity sha512-vaMRR1AC1nrd5CQM0PhlRsO5oc2AAigqr7cCrZ/MW/Rsaflz4RlgzkpL4qoU/z1F6wrbd85iFv1OQj/y5RdGvg==
+  read-pkg-up@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-1.0.1.tgz"
+    integrity sha512-WD9MTlNtI55IwYUS27iHh9tK3YoIVhxis8yKhLpTqWtml739uXc9NWTpxoHkfZf3+DkCCsXox94/VWZniuZm6A==
     dependencies:
-      find-up "^6.3.0"
-      read-pkg "^7.1.0"
-      type-fest "^2.5.0"
+      find-up "^1.0.0"
+      read-pkg "^1.0.0"
   
   read-pkg@^1.0.0:
     version "1.1.0"
@@ -6784,16 +6723,6 @@ Lockfile:
       normalize-package-data "^2.5.0"
       parse-json "^5.0.0"
       type-fest "^0.6.0"
-  
-  read-pkg@^7.1.0:
-    version "7.1.0"
-    resolved "https://registry.npmjs.org/read-pkg/-/read-pkg-7.1.0.tgz"
-    integrity sha512-5iOehe+WF75IccPc30bWTbpdDQLOCc3Uu8bi3Dte3Eueij81yx1Mrufk8qBx/YAbR4uL1FdUr+7BKXDwEtisXg==
-    dependencies:
-      "@types/normalize-package-data" "^2.4.1"
-      normalize-package-data "^3.0.2"
-      parse-json "^5.2.0"
-      type-fest "^2.0.0"
   
   "readable-stream@1 || 2", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.3.3, readable-stream@^2.3.6, readable-stream@~2.3.6:
     version "2.3.8"
@@ -7840,11 +7769,6 @@ Lockfile:
     resolved "https://registry.npmjs.org/type-fest/-/type-fest-0.8.1.tgz"
     integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
   
-  type-fest@^2.0.0, type-fest@^2.5.0:
-    version "2.19.0"
-    resolved "https://registry.npmjs.org/type-fest/-/type-fest-2.19.0.tgz"
-    integrity sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==
-  
   type-is@~1.6.18:
     version "1.6.18"
     resolved "https://registry.npmjs.org/type-is/-/type-is-1.6.18.tgz"
@@ -8411,11 +8335,6 @@ Lockfile:
     version "0.1.0"
     resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
     integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
-  
-  yocto-queue@^1.0.0:
-    version "1.0.0"
-    resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-1.0.0.tgz"
-    integrity sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==
   
   zwitch@^1.0.0:
     version "1.0.5"
